@@ -1,3 +1,6 @@
+import datetime
+import time
+
 import requests
 
 from api.group import get_group_list, get_group_member_info
@@ -42,4 +45,8 @@ def run_job():
 
 
 if __name__ == '__main__':
-    run_job()
+    while True:
+        hour = datetime.datetime.hour
+        if hour == 7:
+            run_job()
+        time.sleep(3600)
