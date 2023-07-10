@@ -34,9 +34,9 @@ def send_news():
     date = data["date"]
     news = data["news"]
     news = "\n".join(news)
-    msg = f"今日新闻{date}:\n{news}"
+    msg = f"{date}:\n{news}"
     print(msg)
-    send_msg(message=msg, target_id=720679782, message_type="group")
+    send_msg(message=msg, target_id=187861757, message_type="group")
 
 
 if __name__ == '__main__':
